@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  position: relative;
+  height: 1000vh;
+  font-family: 'Urbanist', sans-serif;
+  margin: 0;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+
+  z-index: 999;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.container{
+  width: 1600px;
+  margin: auto;
+}
+
+.subcontainer{
+  width: 85%;
+  margin: auto;
+}
+
+.navbar{
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-menu li a{
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: .5rem .5rem;
+  border-radius: 999px;
+  transition: all .2s ease-in-out;
+}
+
+.nav-menu li:hover a{
+  background-color: #FFC533;
+  color: white;
+}
+
+.nav-branding{
+  width: 150px;
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  background-color: black;
+}
+
+@media(max-width:1600px){
+  .container{
+    width: 100%;
+  }
+}
+
+@media(max-width:1024px) {
+  .hamburger{
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+      position: fixed;
+      left: -100%;
+      top: 100px;
+      gap: 0;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+  }
+  
+  .nav-item{
+      margin: 16px 0;
+  }
+
+  .nav-menu.active{
+      left: 0;
+  }
+}
+
+/*End of Navigation Bar*/
+
+
+.subcontent{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 8px 20px;
+  width: 40%;
+}
+
+.featured-image{
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media screen and (max-width: 856px) {
+  #eo, #fans, #jual-beli, #dana-terjamin, #laporan-penjualan, #promosi, #refund, #ramah-fans, #faq-list{
+    width: 80%;
+  }
+}
+
+.title{
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+#description{
+  text-align: center;
+  padding: 0 20px;
+}
+
+#feature-description{
+  text-align: left;
+}
+
+/*End of Content*/
+
+.profile-pict{
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.profile-pict-container{
+  border: 2px;
+}
+
+.profile-card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 8px 20px;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/*
+.answer{
+  display: none;
+}
+
+.accordion-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+
+}
+
+.accordion-question{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-answer-accordion{
+  width: 100%;
+  border-bottom: 1px solid black ;
+}
+
+.question{
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*End of FAQ*/
+
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+ 
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+ 
+main aside .social-media ul {
+  padding: 1rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #FFC533;
+ 
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+ 
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  transition: all .1s ease-in-out;
+}
+ 
+main aside .social-media li a:hover {
+  color: white;
+}
